@@ -3,4 +3,17 @@
 @theme {
   --font-display: serif;
   --font-script: sans-serif;
+
+  @keyframes rotateHalfTurn {
+     0%,40%   {transform: rotate(0)}
+     80%,100% {transform: rotate(.5turn)}
+  }
+
+  @keyframes slideIn {
+     80%,100% {transform: translate(14px)}
+  }
+
+  @keyframes slideOut {
+     80%,100% {transform: translate(-14px)}
+  }
 }
