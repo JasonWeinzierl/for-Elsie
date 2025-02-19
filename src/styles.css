@@ -1,0 +1,6 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-display: serif;
+  --font-script: sans-serif;
+}
