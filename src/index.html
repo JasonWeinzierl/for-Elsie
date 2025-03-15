@@ -13,24 +13,63 @@
   <script defer src="main.js" type="module"></script>
 </head>
 
-<body class="font-display flex flex-col h-dvh bg-lime-100">
-  <main class="flex-1 mt-16">
-    <div class="flex flex-col items-center gap-4">
-      <h1 class="text-4xl font-script">&#x1F49A; Elsie &amp; Jason</h1>
-      <h2 class="text-xl">Hey! You're super early!</h2>
-      <p class="text-center">
-        We're still working on our website. Come back later!
-      </p>
-      <div class="loader"></div>
-    </div>
-  </main>
-  <footer>
-    <p class="text-center mb-4">
-      made by Jason
-      <a href="https://github.com/JasonWeinzierl/for-Elsie" class="hover:underline">
-        for Elsie
-      </a>
-    </p>
-  </footer>
+<body class="min-h-dvh">
+  <div id="root" class="min-h-dvh">
+    <main class="overflow-x-visible">
+      <div id="frame-wrapper">
+        <div id="layout" class="w-full flex flex-col h-screen max-h-full z-10 overflow-auto">
+
+          <div id="aux-frame" class="relative lg:fixed inset-0 pointer-events-none">
+            <div id="aux-frame-inner" class="relative h-screen w-full lg:w-2/3">
+              <div id="aux-frame-image" class="absolute inset-0 h-screen bg-[url(https://i.postimg.cc/pVSHS9B6/c852a390-01db-11f0-b30a-7d4fc7b5b306-Unsplash-george-mihes-wtj-Ck-Ffe-ko.webp)] bg-cover bg-center bg-no-repeat"></div>
+              <div id="aux-frame-title" class="absolute flex flex-col w-full h-3/4 bottom-0 items-start justify-end p-[10%] text-white bg-gradient-to-t from-black/30 to-transparent">
+                <p class="font-serif text-7xl">Elsie &amp; Jason</p>
+                <div class="mt-4">
+                  <p class="font-sans text-xl font-semibold">Hey! You're super early! We're still working on our website. Come back later!</p>
+                </div>
+              </div>
+              <button id="menu-button" type="button" class="hidden fixed z-20 pointer-events-auto cursor-pointer left-6 top-6 h-12 flex px-5 rounded-4xl overflow-hidden text-black before:inset-0 before:absolute before:bg-white/75">
+                <div class="flex items-center content-center justify-between gap-2 z-30">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>
+                  <p class="uppercase text-sm">MENU</p>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <div id="main-frame" class="w-full lg:w-1/3 lg:ml-auto">
+
+            <div id="page-welcome" class="w-full">
+              <div class="mb-16">
+                <div class="h-screen flex flex-col items-center justify-center px-[15%] overflow-y-hidden">
+                  <div id="event-logistics" class="flex flex-col items-center gap-y-12">
+                    <div>
+                      <p class="text-4xl font-serif">Friday November 7, 2025</p>
+                    </div>
+                    <div>
+                      <p class="text-2xl font-serif">Kansas City, MO, USA</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <footer class="mb-16">
+              <p class="text-center mb-4">
+                made by Jason
+                <a href="https://github.com/JasonWeinzierl/for-Elsie" class="hover:underline">
+                  for Elsie
+                </a>
+              </p>
+            </footer>
+
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
 </body>
 </html>
