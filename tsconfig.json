@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "DOM",
+      "ESNext",
+    ],
+    "allowJs": true,
+    "checkJs": true,
+    "noEmit": true,
+    "strict": true,
+  },
+  "include": [
+    "src/**/*.js",
+    "src/**/*.d.ts",
+  ],
+  "exclude": [
+    "node_modules",
+  ],
+}
