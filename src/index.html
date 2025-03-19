@@ -20,7 +20,7 @@
         <div id="layout" class="w-full flex flex-col h-screen max-h-full z-10 overflow-auto">
 
           <div id="aux-frame" class="relative lg:fixed inset-0 pointer-events-none">
-            <div id="aux-frame-inner" class="relative h-screen w-full lg:w-2/3">
+            <div id="aux-frame-inner" class="relative h-screen w-full lg:w-[61%]">
               <div id="aux-frame-image" class="absolute inset-0 h-screen bg-[url(https://i.postimg.cc/pVSHS9B6/c852a390-01db-11f0-b30a-7d4fc7b5b306-Unsplash-george-mihes-wtj-Ck-Ffe-ko.webp)] bg-cover bg-center bg-no-repeat"></div>
               <div id="aux-frame-title" class="absolute flex flex-col w-full h-3/4 bottom-0 items-start justify-end p-[10%] text-white bg-gradient-to-t from-black/30 to-transparent">
                 <p class="font-serif text-7xl">Elsie &amp; Jason</p>
@@ -39,31 +39,145 @@
             </div>
           </div>
 
-          <div id="main-frame" class="w-full lg:w-1/3 lg:ml-auto">
+          <div id="main-frame" class="w-full lg:w-[39%] lg:ml-auto">
 
-            <div id="page-welcome" class="w-full">
+            <div id="welcome" class="w-full">
               <div class="mb-16">
                 <div class="h-screen flex flex-col items-center justify-center px-[15%] overflow-y-hidden">
-                  <div id="event-logistics" class="flex flex-col items-center gap-y-12">
+                  <div id="event-logistics" class="flex flex-col items-center gap-y-8">
                     <div>
-                      <p class="text-4xl font-serif">Friday November 7, 2025</p>
+                      <p class="text-3xl font-serif text-center">Friday<br>November 7, 2025</p>
                     </div>
                     <div>
-                      <p class="text-2xl font-serif">Kansas City, MO, USA</p>
+                      <p class="text-2xl font-serif tracking-tighter">Kansas City, MO</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <footer class="mb-16">
+            <div id="schedule" class="w-full">
+              <div class="mb-16">
+                <p class="text-4xl text-center font-serif">Schedule</p>
+                <div class="px-12 py-8">
+                  <div class="mx-auto lg:max-w-60">
+                    <div class="flex flex-col">
+                      <section>
+                        <header class="border-b border-b-gray-200 mb-10">
+                          <p class="text-center text-lg tracking-tight text-gray-500">To Be Announced</p>
+                        </header>
+                        <div class="flex flex-col gap-y-10">
+                          <div class="flex flex-col gap-y-2 animate-pulse">
+                            <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48"></div>
+                            <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-24"></div>
+                            <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-30"></div>
+                          </div>
+                          <div class="flex flex-col gap-y-2 animate-pulse">
+                            <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48"></div>
+                            <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-26"></div>
+                            <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-32"></div>
+                          </div>
+                          <div class="flex flex-col gap-y-2 animate-pulse">
+                            <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48"></div>
+                            <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-18"></div>
+                            <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-36"></div>
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="registry" class="w-full">
+              <div class="mb-16">
+                <p class="text-4xl text-center font-serif">Registry</p>
+                <div class="px-12 py-8">
+                  <div class="mx-auto lg:max-w-60">
+                    <div class="flex flex-col gap-y-10">
+                      <div class="flex flex-col gap-y-4 animate-pulse">
+                        <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48"></div>
+                        <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-24"></div>
+                        <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-32"></div>
+                      </div>
+                      <div class="flex flex-col gap-y-4 animate-pulse">
+                        <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48"></div>
+                        <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-26"></div>
+                        <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-30"></div>
+                      </div>
+                      <div class="flex flex-col gap-y-4 animate-pulse">
+                        <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48"></div>
+                        <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-18"></div>
+                        <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-32"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="faq">
+              <div class="mb-16">
+                <p class="text-4xl text-center font-serif">Q &amp; A</p>
+                <div class="px-12 py-8">
+                  <div class="mx-auto lg:max-w-60">
+                    <div class="flex flex-col gap-y-10">
+                      <div class="flex flex-col gap-y-4 animate-pulse">
+                        <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48"></div>
+                        <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-24"></div>
+                        <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-30"></div>
+                      </div>
+                      <div class="flex flex-col gap-y-4 animate-pulse">
+                        <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48"></div>
+                        <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-26"></div>
+                        <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-32"></div>
+                      </div>
+                      <div class="flex flex-col gap-y-4 animate-pulse">
+                        <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48"></div>
+                        <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-18"></div>
+                        <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-36"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="wedding-party" class="w-full">
+              <div class="mb-16">
+                <p class="text-4xl text-center font-serif">Wedding Party</p>
+                <div class="px-12 py-8">
+                  <div class="mx-auto lg:max-w-60">
+                    <div class="flex flex-wrap gap-y-10">
+                      <div class="grow-0 basis-1/2 max-w-1/2 px-2 animate-pulse">
+                        <div role="img" class="rounded-xs w-full pt-[100%] bg-lime-200 dark:bg-lime-600 cursor-pointer hover:scale-110 transition-transform duration-500"></div>
+                        <div class="mt-4 flex flex-col cursor-pointer">
+                          <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-24"></div>
+                          <p class="font-semibold">Maid of Honor</p>
+                        </div>
+                      </div>
+                      <div class="grow-0 basis-1/2 max-w-1/2 px-2 animate-pulse">
+                        <div role="img" class="rounded-xs w-full pt-[100%] bg-indigo-200 dark:bg-indigo-900 cursor-pointer hover:scale-110 transition-transform duration-500"></div>
+                        <div class="mt-4 flex flex-col cursor-pointer">
+                          <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-24"></div>
+                          <p class="font-semibold">Best Man</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="about" class="mb-16">
               <p class="text-center mb-4">
                 made by Jason
                 <a href="https://github.com/JasonWeinzierl/for-Elsie" class="hover:underline">
                   for Elsie
                 </a>
               </p>
-            </footer>
+            </div>
 
           </div>
         </div>
