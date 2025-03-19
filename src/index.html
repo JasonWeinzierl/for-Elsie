@@ -28,7 +28,7 @@
                   <p class="font-sans text-xl font-semibold">Hey! You're super early! We're still working on our website. Come back later!</p>
                 </div>
               </div>
-              <button id="menu-button" type="button" class="hidden fixed z-20 pointer-events-auto cursor-pointer left-6 top-6 h-12 flex px-5 rounded-4xl overflow-hidden text-black before:inset-0 before:absolute before:bg-white/75">
+              <button id="menu-button" type="button" popovertarget="menu" class="fixed z-20 pointer-events-auto cursor-pointer left-6 top-6 h-12 flex px-5 rounded-4xl overflow-hidden text-black before:inset-0 before:absolute before:bg-white/75">
                 <div class="flex items-center content-center justify-between gap-2 z-30">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -36,6 +36,26 @@
                   <p class="uppercase text-sm">MENU</p>
                 </div>
               </button>
+              <nav popover id="menu" role="navigation" class="h-full pointer-events-auto starting:open:opacity-0 open:opacity-100 transition-opacity duration-200">
+                <button type="button" popovertarget="menu" popovertargetaction="hide" class="cursor-pointer absolute top-2 right-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                  </svg>
+                </button>
+                <div class="flex flex-col h-full gap-y-8 p-8 text-lime-700 bg-white">
+                  <div>
+                    <p class="font-serif text-4xl">Elsie &amp; Jason</p>
+                  </div>
+                  <div class="flex flex-col gap-y-4">
+                    <a href="#welcome" onclick="document.getElementById('menu').hidePopover()" class="text-2xl font-serif">Home</a>
+                    <a href="#schedule" onclick="document.getElementById('menu').hidePopover()" class="text-2xl font-serif">Schedule</a>
+                    <a href="#registry" onclick="document.getElementById('menu').hidePopover()" class="text-2xl font-serif">Registry</a>
+                    <a href="#faq" onclick="document.getElementById('menu').hidePopover()" class="text-2xl font-serif">Q &amp; A</a>
+                    <a href="#wedding-party" onclick="document.getElementById('menu').hidePopover()" class="text-2xl font-serif">Wedding Party</a>
+                    <a href="#about" onclick="document.getElementById('menu').hidePopover()" class="text-2xl font-serif">About</a>
+                  </div>
+                </div>
+              </nav>
             </div>
           </div>
 
