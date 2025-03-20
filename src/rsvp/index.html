@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US" style="font-size: 20px;">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Elsie &amp; Jason | RSVP</title>
+
+  <script defer src="rsvp.js" type="module"></script>
+</head>
+
+<body class="min-h-dvh bg-white">
+  <div id="root" class="min-h-dvh flex justify-center">
+    <main class="mt-8 w-4xl max-w-full flex justify-center">
+      <div class="w-full md:w-2/3 md:grow-0 md:shrink-0 md:basis-auto">
+        <div class="relative rounded-xl max-w-md mx-auto px-10 pt-6 pb-16">
+          <h2 class="text-4xl font-serif text-center mb-6">Elsie &amp; Jason</h2>
+          <div class="text-center mb-6 flex flex-col">
+            <span class="mb-2">Kansas City, MO</span>
+            <span>Friday, November 7, 2025</span>
+          </div>
+          <form novalidate>
+            <div class="text-center text-sm mb-8 font-semibold">
+              Enter your name to RSVP
+            </div>
+            <div class="flex justify-between flex-col md:flex-row mb-4">
+              <div class="mb-4 md:mr-4 grow">
+                <label for="firstname" class="inline-block mb-2 font-semibold">First Name</label>
+                <input id="firstname" type="text" placeholder="First Name" autocomplete="given-name" required
+                  class="block w-full py-2 px-4 rounded-sm border">
+              </div>
+              <div class="grow">
+                <label for="lastname" class="inline-block mb-2 font-semibold">Last Name</label>
+                <input id="lastname" type="text" placeholder="Last Name" autocomplete="family-name" required
+                  class="block w-full py-2 px-4 rounded-sm border">
+              </div>
+            </div>
+            <div>
+              <button type="button" disabled class="bg-gray-600 cursor-not-allowed block tracking-wide mx-auto mt-8 w-2/3 min-h-10 font-bold text-center text-white rounded-sm">
+                Next
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
