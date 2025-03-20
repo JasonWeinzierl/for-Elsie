@@ -24,8 +24,8 @@ const intersectionObserver = new IntersectionObserver(entries => {
     }
   });
 }, {
-  // Relative to the layout (or could be null since this is effectively the viewport).
-  root: document.getElementById('layout'),
+  // Relative to the viewport.
+  root: null,
   // Shrink the intersection bounds to a vertically centered horizontal line.
   rootMargin: '-50% 0% -50% 0%',
   // Use the default value.
