@@ -52,7 +52,6 @@ addEventListener('hashchange', e => {
   const element = document.querySelector(location.hash);
   if (element) {
     element.scrollIntoView({
-      behavior: 'smooth',
       // Center to avoid conflicting with the intersection observer.
       block: 'center',
     });
