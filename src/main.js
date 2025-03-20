@@ -4,13 +4,13 @@ import './styles.css';
 /** @type {number | null} */
 let timeout = null;
 /** @param {string} hash */
-function debouncePushState(hash) {
+function debounceReplaceState(hash) {
   if (timeout) {
     clearTimeout(timeout);
   }
   timeout = setTimeout(() => {
-    if (window.location.hash !== hash) {
-      history.pushState({}, '', hash);
+    if (location.hash !== hash) {
+      history.replaceState({}, '', hash);
     }
     timeout = null;
   }, 200);
@@ -20,7 +20,7 @@ const intersectionObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       const hash = `#${entry.target.id}`;
-      debouncePushState(hash);
+      debounceReplaceState(hash);
     }
   });
 }, {
@@ -48,8 +48,8 @@ const intersectionObserver = new IntersectionObserver(entries => {
 });
 
 // Smooth scroll when navigating back.
-window.addEventListener('hashchange', e => {
-  const element = document.querySelector(window.location.hash);
+addEventListener('hashchange', e => {
+  const element = document.querySelector(location.hash);
   if (element) {
     element.scrollIntoView({
       behavior: 'smooth',
