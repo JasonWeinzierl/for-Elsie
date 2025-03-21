@@ -1,5 +1,13 @@
 // @ts-check
 import './styles.css';
+import { createIcons, Menu, X, } from 'lucide';
+
+createIcons({
+  icons: {
+    Menu,
+    X,
+  },
+});
 
 /** @type {number | null} */
 let timeout = null;

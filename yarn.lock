@@ -801,6 +801,7 @@ __metadata:
   resolution: "for-elsie@workspace:."
   dependencies:
     "@tailwindcss/vite": "npm:^4.0.15"
+    lucide: "npm:^0.483.0"
     tailwindcss: "npm:^4.0.15"
     vite: "npm:^6.2.2"
   languageName: unknown
@@ -1084,6 +1085,13 @@ __metadata:
   version: 10.4.3
   resolution: "lru-cache@npm:10.4.3"
   checksum: 10c0/ebd04fbca961e6c1d6c0af3799adcc966a1babe798f685bb84e6599266599cd95d94630b10262f5424539bc4640107e8a33aa28585374abf561d30d16f4b39fb
+  languageName: node
+  linkType: hard
+
+"lucide@npm:^0.483.0":
+  version: 0.483.0
+  resolution: "lucide@npm:0.483.0"
+  checksum: 10c0/a9f78c0b646d0680e62e3655095aa539e77d745b1fb6881f726f4beae78493204883686cb81d3427ab125bf47c85dd48951a2312114f9010829ce0e37adf83cf
   languageName: node
   linkType: hard
 
