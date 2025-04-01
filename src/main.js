@@ -1,11 +1,19 @@
 // @ts-check
 import './styles.css';
-import { createIcons, Menu, X, } from 'lucide';
+import { createIcons, ChevronDown, Menu, X, } from 'lucide';
 
 createIcons({
   icons: {
     Menu,
     X,
+  },
+});
+createIcons({
+  icons: {
+    ChevronDown,
+  },
+  attrs: {
+    'stroke-width': 1,
   },
 });
 
@@ -66,3 +74,29 @@ addEventListener('hashchange', e => {
   }
   e.preventDefault();
 });
+
+/**
+* @param {Date} date
+*/
+function formatDate(date) {
+  const now = new Date();
+  const diffMs = date.getTime() - now.getTime();
+
+  const days = Math.abs(Math.floor(diffMs / (1000 * 60 * 60 * 24)));
+  const hours = Math.abs(Math.floor((diffMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+  const minutes = Math.abs(Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60)));
+  const seconds = Math.abs(Math.floor((diffMs % (1000 * 60)) / 1000));
+
+  return `${days} days ${hours} hours ${minutes} minutes`;
+}
+
+const dateCounterElement = /** @type {HTMLTimeElement | null} */ (document.getElementById('event-logistics-date-counter'));
+if (dateCounterElement) {
+  const weddingDate = new Date('2025-11-07T17:00:00-06:00');
+  dateCounterElement.dateTime = weddingDate.toISOString();
+
+  dateCounterElement.textContent = formatDate(weddingDate);
+  setInterval(() => {
+    dateCounterElement.textContent = formatDate(weddingDate);
+  }, 1_000);
+}

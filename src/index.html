@@ -59,7 +59,7 @@
 
             <div id="welcome" class="w-full">
               <div class="mb-16">
-                <div class="h-svh flex flex-col items-center justify-center px-[15%]">
+                <div class="h-svh flex flex-col items-center justify-center px-[15%] gap-12">
                   <div id="event-logistics" class="flex flex-col items-center gap-y-8">
                     <div>
                       <p class="text-3xl font-serif text-center text-pink-900">Friday<br>November 7, 2025</p>
@@ -67,6 +67,22 @@
                     <div>
                       <p class="text-2xl font-serif tracking-tighter text-pink-900">Kansas City, MO</p>
                     </div>
+                    <div>
+                      <time id="event-logistics-date-counter" class="text-xs uppercase tracking-widest text-pink-900"></time>
+                    </div>
+                  </div>
+                  <div id="event-rsvp" class="hidden">
+                    <a href="/rsvp/" class="text-pink-900 hover:text-pink-700 py-2 px-4 border-2 rounded-full">
+                      Don't Forget to RSVP
+                    </a>
+                  </div>
+                  <div id="event-scroll-down" class="hidden sm:block">
+                    <a href="#schedule" class="text-pink-900 text-sm flex flex-col items-center gap-4">
+                      <p>View Details</p>
+                      <div class="scale-x-150 animate-bounce">
+                        <i data-lucide="chevron-down" class="size-10"></i>
+                      </div>
+                    </a>
                   </div>
                 </div>
               </div>
