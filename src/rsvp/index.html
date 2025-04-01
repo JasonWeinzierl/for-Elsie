@@ -19,24 +19,24 @@
             <span class="mb-2">Kansas City, MO</span>
             <span>Friday, November 7, 2025</span>
           </div>
-          <form novalidate>
+          <form class="group">
             <div class="text-center text-sm mb-8 font-semibold">
               Enter your name to RSVP
             </div>
             <div class="flex justify-between flex-col md:flex-row mb-4">
               <div class="mb-4 md:mr-4 grow">
                 <label for="firstname" class="inline-block mb-2 font-semibold">First Name</label>
-                <input id="firstname" type="text" placeholder="First Name" autocomplete="given-name" required
-                  class="block w-full py-2 px-4 rounded-sm border">
+                <input id="firstname" type="text" placeholder="First Name" name="givenName" autocomplete="given-name" required
+                  class="block w-full py-2 px-4 rounded-sm border user-invalid:border-red-500">
               </div>
               <div class="grow">
                 <label for="lastname" class="inline-block mb-2 font-semibold">Last Name</label>
-                <input id="lastname" type="text" placeholder="Last Name" autocomplete="family-name" required
-                  class="block w-full py-2 px-4 rounded-sm border">
+                <input id="lastname" type="text" placeholder="Last Name" name="familyName" autocomplete="family-name" required
+                  class="block w-full py-2 px-4 rounded-sm border user-invalid:border-red-500">
               </div>
             </div>
             <div>
-              <button type="button" disabled class="bg-gray-600 cursor-not-allowed block tracking-wide mx-auto mt-8 w-2/3 min-h-10 font-bold text-center text-white rounded-sm">
+              <button type="submit" class="bg-indigo-500 group-invalid:bg-gray-600 active:group-valid:bg-indigo-300 hover:group-valid:bg-indigo-400 transition-colors block cursor-pointer tracking-wide mx-auto mt-8 w-2/3 min-h-10 font-bold text-center text-white rounded-sm">
                 Next
               </button>
             </div>
