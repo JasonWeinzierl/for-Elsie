@@ -28,12 +28,12 @@ jobs:
         with:
           node-version: 22
       - run: corepack enable
-      - run: yarn install
-      - run: yarn build
+      - run: yarn workspaces focus @for-elsie/client
+      - run: yarn client:build
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
+          path: './packages/client/dist'
       - id: deployment
         uses: actions/deploy-pages@v4

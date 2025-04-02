@@ -180,6 +180,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@for-elsie/client@workspace:packages/client":
+  version: 0.0.0-use.local
+  resolution: "@for-elsie/client@workspace:packages/client"
+  dependencies:
+    "@tailwindcss/vite": "npm:^4.1.0"
+    lucide: "npm:^0.486.0"
+    tailwindcss: "npm:^4.1.0"
+    vite: "npm:^6.2.4"
+  languageName: unknown
+  linkType: soft
+
 "@isaacs/cliui@npm:^8.0.2":
   version: 8.0.2
   resolution: "@isaacs/cliui@npm:8.0.2"
@@ -799,11 +810,6 @@ __metadata:
 "for-elsie@workspace:.":
   version: 0.0.0-use.local
   resolution: "for-elsie@workspace:."
-  dependencies:
-    "@tailwindcss/vite": "npm:^4.1.0"
-    lucide: "npm:^0.486.0"
-    tailwindcss: "npm:^4.1.0"
-    vite: "npm:^6.2.4"
   languageName: unknown
   linkType: soft
 
